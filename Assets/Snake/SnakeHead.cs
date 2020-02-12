@@ -19,6 +19,7 @@ public class SnakeHead : MonoBehaviour
     public Vector2 horizontalLimits;
     public GameObject tailPrefab;
     public List<Transform> tail;
+    public GameManager gameManager;
 
     Vector3 lastPos;
     // Start is called before the first frame update
@@ -71,12 +72,24 @@ public class SnakeHead : MonoBehaviour
         }
     }
 
+    public void ResetSnake()
+    {
+        transform.position = Vector3.zero;
+        for (int i = 0; i < tail.Count; i++)
+        {
+            Destroy(tail[i].gameObject);
+        }
+        tail.Clear();
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Block"))
         {
             print("Juego Terminado " + col.name);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            //UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            gameManager.LoseLive();
+            ResetSnake();
         }
         else if (col.CompareTag("Food"))
         {
@@ -86,7 +99,7 @@ public class SnakeHead : MonoBehaviour
             }
             else
             {
-                tail.Add(Instantiate(tailPrefab).transform);
+                tail.Add(Instantiate(tailPrefab, lastPos, Quaternion.identity).transform);
             }
             col.transform.position = new Vector2(Random.Range(horizontalLimits.x, horizontalLimits.y), Random.Range(verticalLimits.x, verticalLimits.y));
         }
