@@ -1,0 +1,27 @@
+﻿C:\Users\ShahriaR\Desktop\t$m$p$$$\Volkswagen-Kombi_Shahriar3D.max
+C:\Users\ShahriaR\Desktop\t$m$p$$$\MAXFILES.TXT
+Texture\studio008.hdr
+Texture\dog.psd
+Texture\scratchmap.png
+Texture\frying_pan_silver_mask2.png
+Texture\033.jpg
+Texture\Texture\wood_light (2).JPG
+Texture\Furnishings.Fabrics.Leather.Pebble.Tan.png
+Texture\AI_27_01_PlasterBare_gloss_2.jpg
+Texture\Furnishings.Fabrics.Leather.Blue.bump.jpg
+Texture\Texture\kp.jpg
+Texture\012.JPG
+Texture\012_ref.jpg
+Texture\wood_dark_reflect.png
+Texture\Archexteriors1_009_Wood.JPG
+Texture\_4_007_wood_2_B.jpg
+Texture\KYGK94862.jpg
+Texture\parche.jpg
+Texture\Thermal & Moisture.Roof Tiles.Spanish.Red.1.jpg
+Texture\Thermal & Moisture.Roof Tiles.Spanish.Red.1.bump.jpg
+Texture\flower1-burgund-diff.JPG
+Texture\Simple_Metal_Mtl_DiamondPlate_pattern.jpg
+Texture\PinClipart.com_palm-clipart_993 (1).jpg
+Texture\mask.jpg
+Texture\images.jpg
+Texture\Surfing-PNG-Image-32151 (1).png
