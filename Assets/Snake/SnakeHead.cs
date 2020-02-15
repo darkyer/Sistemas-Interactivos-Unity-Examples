@@ -72,35 +72,28 @@ public class SnakeHead : MonoBehaviour
         }
     }
 
-    public void ResetSnake()
-    {
-        transform.position = Vector3.zero;
-        for (int i = 0; i < tail.Count; i++)
-        {
-            Destroy(tail[i].gameObject);
-        }
-        tail.Clear();
-    }
+    //public void ResetSnake()
+    //{
+    //    transform.position = Vector3.zero;
+    //    for (int i = 0; i < tail.Count; i++)
+    //    {
+    //        Destroy(tail[i].gameObject);
+    //    }
+    //    tail.Clear();
+    //}
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Block"))
         {
             print("Juego Terminado " + col.name);
-            //UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-            gameManager.LoseLive();
-            ResetSnake();
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            //gameManager.LoseLive();
+            //ResetSnake();
         }
         else if (col.CompareTag("Food"))
         {
-            if (tail.Count != 0)
-            {
-                tail.Add(Instantiate(tailPrefab, tail[tail.Count - 1].position, Quaternion.identity).transform);
-            }
-            else
-            {
-                tail.Add(Instantiate(tailPrefab, lastPos, Quaternion.identity).transform);
-            }
+            tail.Add(Instantiate(tailPrefab, tail[tail.Count - 1].position, Quaternion.identity).transform);
             col.transform.position = new Vector2(Random.Range(horizontalLimits.x, horizontalLimits.y), Random.Range(verticalLimits.x, verticalLimits.y));
         }
     }
