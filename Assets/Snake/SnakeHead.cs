@@ -19,7 +19,7 @@ public class SnakeHead : MonoBehaviour
     public Vector2 horizontalLimits;
     public GameObject tailPrefab;
     public List<Transform> tail;
-    public GameManager gameManager;
+
 
     Vector3 lastPos;
     // Start is called before the first frame update
@@ -72,15 +72,6 @@ public class SnakeHead : MonoBehaviour
         }
     }
 
-    //public void ResetSnake()
-    //{
-    //    transform.position = Vector3.zero;
-    //    for (int i = 0; i < tail.Count; i++)
-    //    {
-    //        Destroy(tail[i].gameObject);
-    //    }
-    //    tail.Clear();
-    //}
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -88,8 +79,6 @@ public class SnakeHead : MonoBehaviour
         {
             print("Juego Terminado " + col.name);
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-            //gameManager.LoseLive();
-            //ResetSnake();
         }
         else if (col.CompareTag("Food"))
         {
