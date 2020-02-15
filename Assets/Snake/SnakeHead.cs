@@ -80,6 +80,11 @@ public class SnakeHead : MonoBehaviour
             Debug.Log("Juego Terminado " + col.name);
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
-
+        else if (col.CompareTag("Food"))
+        {
+            tail.Add(Instantiate(tailPrefab, tail[tail.Count - 1].position, Quaternion.identity).transform);
+            col.transform.position = new Vector2(Random.Range(horizontalLimits.x, horizontalLimits.y),
+                Random.Range(verticalLimits.x, verticalLimits.y));
+        }
     }
 }
