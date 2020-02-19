@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Block
   - Food
+  - Asteroid
+  - Laser
   layers:
   - Default
   - TransparentFX
