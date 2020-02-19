@@ -8,10 +8,12 @@ public class Ship : MonoBehaviour
     public float rotationSpeed = 3;
     Rigidbody2D rigidBody;
     public GameObject laserPrefab;
+    public ParticleSystem particles;
 
     public Vector2 horizontalLimits;
     public Vector2 verticalLimits;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class Ship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var emission = particles.emission;
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.forward * rotationSpeed);
@@ -33,7 +36,13 @@ public class Ship : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             rigidBody.AddRelativeForce(Vector2.up * force);
+            emission.rateOverTime = 20;
         }
+        else
+        {
+            emission.rateOverTime = 0;
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
