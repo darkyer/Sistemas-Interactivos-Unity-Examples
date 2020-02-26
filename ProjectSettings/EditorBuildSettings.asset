@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: 
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/UI/UI.unity
+    guid: 0535f98eae069de4a8bb34cf40d97711
+  - enabled: 1
+    path: Assets/Snake/Snake.unity
+    guid: 2770a7414e408aa4ea1744a020135d22
+  - enabled: 1
     path: Assets/Asteroid/Asteroid.unity
     guid: 544bf57726f887a4c90c7fcecb778247
   m_configObjects: {}
