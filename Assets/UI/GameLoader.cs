@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameLoader : MonoBehaviour
 {
-    public void LoadScene(int sceneNumber)
+    public void LoadScene(int sceneNumber) // función pública de nombre "LoadScene"
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNumber);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNumber); // carga una escena con el nombre que se le mande
     }
 }

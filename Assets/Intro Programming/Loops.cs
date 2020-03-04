@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Loops : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // para imprimir en consola del 1 al 10 se requiere hacer 10 lineas de código o usar un loop
     void Start()
     {
         Debug.Log("Value: 1");
@@ -20,15 +20,14 @@ public class Loops : MonoBehaviour
 
         Debug.Log("---------------------------");
 
-        for (int i=1; i <= 10; i++)
+        for (int i=1; i <= 10; i++) // un "for" requiere 3 elementos
+                                    // 1.- Una variable i con valor 1
+                                    // 2.- La condición para ver si se ejecuta el código dentro (i <= 10)
+                                    // 3.- El incremento de valor de la variable inicial (i) en este caso es i++ que significa que le suma 1 cada iteración
         {
-            Debug.Log("Value: " + i);
+            Debug.Log("Value: " + i); // dentro del código del "for" podemos acceder a la iteración actual con la variable definida al inicio (i)
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // este for hace lo mismo que los primeros debugs.
 }

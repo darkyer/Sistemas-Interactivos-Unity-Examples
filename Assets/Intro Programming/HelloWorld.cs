@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class HelloWorld : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // función creada por unity automaticamente que se ejecuta 1 sola vez al poner "play"
     void Start()
     {
-        Debug.Log("Hello World");
+        Debug.Log("Hello World"); // comando para imprimir en consola "Hello World"
     }
 
-    // Update is called once per frame
+    // función creada por unity automaticamente que se ejecuta cada frame al poner "play"
     void Update()
     {
-        
+        //vacía
     }
 }

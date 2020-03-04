@@ -5,15 +5,16 @@ using UnityEngine;
 public class Methods : MonoBehaviour
 {
 
-    public int varA = 0;
-    public int varB = 0;
-    // Start is called before the first frame update
+    public int varA = 0;    // variable pública de tipo int (solo números enteros)
+    public int varB = 0;    // variable pública de tipo int (solo números enteros)
+
+
     void Start()
     {
-        Debug.Log("A + B =" + Suma(varA, varB));
+        Debug.Log("A + B =" + Suma(varA, varB)); // se imprime el resultado de la funcion Suma y se le pasa como valor "a" la variable varA y como valor "b" la variable varB y los suma
     }
 
-    public int Suma(int a, int b)
+    public int Suma(int a, int b) // funcion llamada Suma de tipo int(enteros) que requiere 2 valores para ejecutarse (a y b) y regresa la suma de estos dos valores
     {
         return a + b;
     }

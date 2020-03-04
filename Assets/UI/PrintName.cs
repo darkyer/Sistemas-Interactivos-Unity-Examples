@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PrintName : MonoBehaviour
 {
-    public void PrintNameButton()
+    public void PrintNameButton() // función pública de nombre "PrintNameButton"
     {
-        Debug.Log(gameObject.name);
+        Debug.Log(gameObject.name); // imrpime el nombre del gameObject que tiene el script agregado
     }
 }
